@@ -13,7 +13,7 @@ RUN apt-get update && \
 
 # install Vertica Client
 COPY misc/download_client.sh .
-RUN bash ./download_client.sh $CLIENT_VERSION && \
+RUN bash ./download_client.sh $VERTICA_VERSION && \
     chown -R root:root /opt && \
     rm -f /opt/vertica/lib/libverticaodbc.so && \
     chmod +x /opt/vertica/bin/* && \
