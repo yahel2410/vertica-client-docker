@@ -13,7 +13,7 @@ before_script:
 build:
   stage: build
   script:
-    - docker build --build-arg --build-arg VERTICA_VERSION=$vertica_version -t $CI_REGISTRY_IMAGE:$vertica_version .
+    - docker build --build-arg VERTICA_VERSION=$vertica_version -t $CI_REGISTRY_IMAGE:$vertica_version .
     - docker push $CI_REGISTRY_IMAGE:$vertica_version
   only:
     - web
