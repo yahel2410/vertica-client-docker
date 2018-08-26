@@ -7,7 +7,7 @@ if [ "$1" = '8.1' ]; then
 elif [ "$1" = '9.1' ] ; then
     client='https://my.vertica.com/client_drivers/9.1.x/9.1.1-0/vertica-client-9.1.1-0.x86_64.tar.gz'
 else
-    echo "Wrong client version"
+    echo "Wrong Vertica version"
     exit 1
 fi
 

@@ -15,7 +15,6 @@ RUN apt-get update && \
 COPY misc/download_client.sh .
 RUN bash ./download_client.sh $VERTICA_VERSION && \
     chown -R root:root /opt && \
-    rm -f /opt/vertica/lib/libverticaodbc.so && \
     chmod +x /opt/vertica/bin/* && \
     export LANG="en_US.UTF-8" && \
     export PATH="/opt/vertica/bin:$PATH" && \
