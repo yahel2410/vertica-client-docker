@@ -1,0 +1,24 @@
+image: docker:latest
+services:
+  - docker:dind
+
+variables:
+
+stages:
+  - build
+
+before_script:
+  - docker login -u yahel2410 -p $TOKEN $CI_REGISTRY
+
+build:
+  stage: build
+  script:
+    - docker build --build-arg --build-arg VERTICA_VERSION=$vertica_version -t $CI_REGISTRY_IMAGE:$vertica_version .
+    - docker push $CI_REGISTRY_IMAGE:$vertica_version
+  only:
+    - web
+  tags:
+    - docker
+
+
+
