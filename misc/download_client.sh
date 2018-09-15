@@ -15,6 +15,6 @@ else
     exit 1
 fi
 
-wget $client > /dev/null
+wget --no-check-certificate $client > /dev/null
 tar -xvf vertica-client*.tar.gz -C /
 rm -f vertica-client*.tar.gz

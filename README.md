@@ -5,7 +5,7 @@ Docker images for Vertica database client
 
 Including:
 - vsql
-- odbc
-- jdbc
+- odbc driver
+- jdbc driver
 - Vertica python client
 - Pyodbc
